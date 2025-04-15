@@ -8,3 +8,10 @@ export function getTasksFromLocalStorage() {
 export function saveTasksToLocalStorage(tasks) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+// 데이터 삭제하기
+export function deleteTaskFromLocalStorage(index) {
+    const tasks = getTasksFromLocalStorage();
+    tasks.splice(index, 1);
+    saveTasksToLocalStorage(tasks);
+}
