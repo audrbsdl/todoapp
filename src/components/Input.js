@@ -10,12 +10,19 @@ function Input({ onAddTask }) {
         }
     }
 
+    const activeEnter = (e) => {
+        if(e.key === "Enter") {
+            handleAdd();
+        }
+    }
+
     return (
         <div>
             <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={(e) => activeEnter(e)}
             />
             <button onClick={handleAdd}>Add</button>
         </div>
