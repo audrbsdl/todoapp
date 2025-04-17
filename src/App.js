@@ -25,8 +25,8 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div className="App-header">What To Do?🤔</div>
+    <div>
+      <div className="Header">What To Do?🤔</div>
       <Input onAddTask={addTask} />
       <TaskList tasks={tasks} onDeleteTask={deleteTask} />
     </div>
