@@ -20,11 +20,12 @@ function Input({ onAddTask }) {
         <div>
             <input
                 type="text"
+                className="Input"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => activeEnter(e)}
             />
-            <button onClick={handleAdd}>Add</button>
+            <button className="Button" onClick={handleAdd}>Add</button>
         </div>
     );
 }
